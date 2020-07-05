@@ -5,6 +5,8 @@ using BenchmarkDotNet.Attributes;
 
 namespace StructClassBench.Benchmarks
 {
+    [JsonExporter]
+    [CsvExporter]
     [MemoryDiagnoser]
     public class SumBenchmark
     {
@@ -18,7 +20,7 @@ namespace StructClassBench.Benchmarks
         private readonly UserCalculator _userCalculatorFromStruct;
         private readonly UserCalculator _userCalculatorFromClass;
 
-        [Params(1000, 1000000, 100000000)]
+        [Params(1000, 100000, 1000000)]
         public int Size { get; set; }
 
         public SumBenchmark()

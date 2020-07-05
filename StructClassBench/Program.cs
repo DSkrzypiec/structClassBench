@@ -7,7 +7,8 @@ namespace StructClassBench
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<SumBenchmark>();
+            var sumSummary = BenchmarkRunner.Run<SumBenchmark>();
+            var modifySummary = BenchmarkRunner.Run<EachElementModifyBenchmark>();
         }
     }
 }

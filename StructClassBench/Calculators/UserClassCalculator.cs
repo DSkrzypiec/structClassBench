@@ -47,5 +47,23 @@ namespace StructClassBench.Calculators
             }
             return sumAccountValue;
         }
+
+        public void ModifyEachElementFromList()
+        {
+            for (var i = 0; i < _usersList.Count; i++)
+            {
+                var tmp = _usersList[i];
+                tmp.UserAge += 2;
+                _usersList[i] = tmp;
+            }
+        }
+
+        public void ModifyEachElementFromArray()
+        {
+            for (var i = 0; i < _usersArray.Length; i++)
+            {
+                _usersArray[i].UserAge += 2;
+            }
+        }
     }
 }
