@@ -1,0 +1,6 @@
+.vs/
+BenchmarkDotNet.Artifacts/
+StructClassBench/bin/
+StructClassBench/obj/
+*.dll
+*.exe
